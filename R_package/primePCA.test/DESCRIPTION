@@ -1,4 +1,4 @@
-Package: primePCA_test
+Package: primePCA.test
 Type: Package
 Title: Projected Refinement for Imputation of Missing Entries in PCA
 Version: 1.0
