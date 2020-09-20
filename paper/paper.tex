@@ -76,6 +76,7 @@
 \DeclareMathOperator*{\argmax}{argmax}
 \DeclareMathOperator{\var}{Var}
 \DeclareMathOperator{\diag}{diag}
+\newcommand{\indep}{\perp \hspace{-.25cm} \perp}
 \newcommand{\E}{\mathbb{E}}
 \DeclareMathOperator{\rank}{rank}
 \DeclareMathOperator{\supp}{supp}
@@ -160,7 +161,7 @@
 \section{Main results}
 
 \label{Sec:Proofs}
-We define two linear maps $\mathcal{D}, \mathcal{F}: \mathbb{R}^{d\times d}\to \mathbb{R}^{d\times d}$, such that for any $\bA = (A_{ij}) \in\mathbb{R}^{d\times d}$, we have $[\mathcal{D}(\bA)]_{ij} := A_{ij}\mathds{1}_{\{i=j\}}$ and $\mathcal{F}(\bA) := \bA - \mathcal{D}(\bA)$. In other words, $\mathcal{D}(\bA)$ and $\mathcal{F}(\bA)$ correspond to the diagonal and off-diagonal parts of $\bA$ respectively.
+We define two linear maps $\mathcal{D}, \mathcal{F}: \mathbb{R}^{d\times d}\to \mathbb{R}^{d\times d}$, such that for any $\bA = (A_{ij}) \in\mathbb{R}^{d\times d}$, we have $[\mathcal{D}(\bA)]_{ij} := A_{ij}\mathds{1}_{\{i=j\}}$ and $\mathcal{F}(\bA) := \bA - \mathcal{D}(\bA)$. In other words, $\mathcal{D}(\bA)$ and $\mathcal{F}(\bA)$ correspond to the diagonal and off-diagonal parts of $\bA$ respectively. We write $X \indep Y$ if $X$ and $Y$ are independent. 
 
 \begin{proof}
 Define an event
