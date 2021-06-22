@@ -1,0 +1,271 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{latexsym, bbm, float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{type1cm}
+\usepackage{framed}
+%\usepackage{times}w
+\usepackage{indentfirst}
+\usepackage{makeidx}
+\usepackage{amsfonts}
+%\usepackage{wrapfigure}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{natbib}
+
+\setlength{\oddsidemargin}{0.0in}
+\setlength{\topmargin}{0.15in}
+\setlength{\textwidth}{6.2in}
+\setlength{\textheight}{8.75in}
+
+\setlength{\parskip}{0.3cm}
+
+
+\newcommand{\norm}[1]{\lVert#1\rVert}
+\renewcommand{\baselinestretch}{1}
+\pagenumbering{arabic}
+
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{defn}{Definition}[section]
+\newtheorem{lem}{Lemma}[section]
+\newtheorem{cor}{Corollary}[section]
+\newtheorem{assum}{Assumption}[section]
+
+
+\theoremstyle{definition}
+\newtheorem{exm}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+
+
+
+
+
+
+%%%%%%%%%% define math symbols %%%%%%%%%%
+%% bold and cal letters/LETTERS
+\newcommand{\bfm}[1]{\ensuremath{\mathbf{#1}}}
+\def\ba{\bfm a}     \def\bA{\bfm A}     \def\cA{{\cal  A}}     \def\calA{{\cal  A}}
+\def\bb{\bfm b}     \def\bB{\bfm B}     \def\cB{{\cal  B}}     \def\calB{{\cal  B}}
+\def\bc{\bfm c}     \def\bC{\bfm C}     \def\cC{{\cal  C}}     \def\calC{{\cal  C}}
+\def\bd{\bfm d}     \def\bD{\bfm D}     \def\cD{{\cal  D}}     \def\calD{{\cal  D}}
+\def\be{\bfm e}     \def\bE{\bfm E}     \def\cE{{\cal  E}}     \def\calE{{\cal  E}}
+\def\bff{\bfm f}    \def\bF{\bfm F}     \def\cF{{\cal  F}}     \def\calF{{\cal  F}}
+\def\bg{\bfm g}     \def\bG{\bfm G}     \def\cG{{\cal  G}}     \def\calG{{\cal  G}}
+\def\bh{\bfm h}     \def\bH{\bfm H}     \def\cH{{\cal  H}}     \def\calH{{\cal  H}}
+\def\bi{\bfm i}     \def\bI{\bfm I}     \def\cI{{\cal  I}}     \def\calI{{\cal  I}}
+\def\bj{\bfm j}     \def\bJ{\bfm J}     \def\cJ{{\cal  J}}     \def\calJ{{\cal  J}}
+\def\bk{\bfm k}     \def\bK{\bfm K}     \def\cK{{\cal  K}}     \def\calK{{\cal  K}}
+\def\bl{\bfm l}     \def\bL{\bfm L}     \def\cL{{\cal  L}}     \def\calL{{\cal  L}}
+\def\bm{\bfm m}     \def\bM{\bfm M}     \def\cM{{\cal  M}}     \def\calM{{\cal  M}}
+\def\bn{\bfm n}     \def\bN{\bfm N}     \def\cN{{\cal  N}}     \def\calN{{\cal  N}}
+\def\bo{\bfm o}     \def\bO{\bfm O}     \def\cO{{\cal  O}}     \def\calO{{\cal  O}}
+\def\bp{\bfm p}     \def\bP{\bfm P}     \def\cP{{\cal  P}}     \def\calP{{\cal  P}}
+\def\bq{\bfm q}     \def\bQ{\bfm Q}     \def\cQ{{\cal  Q}}     \def\calQ{{\cal  Q}}
+\def\br{\bfm r}     \def\bR{\bfm R}     \def\cR{{\cal  R}}     \def\calR{{\cal  R}}
+\def\bs{\bfm s}     \def\bS{\bfm S}     \def\cS{{\cal  S}}     \def\calS{{\cal  S}}
+\def\bt{\bfm t}     \def\bT{\bfm T}     \def\cT{{\cal  T}}     \def\calT{{\cal  T}}
+\def\bu{\bfm u}     \def\bU{\bfm U}     \def\cU{{\cal  U}}     \def\calU{{\cal  U}}
+\def\bv{\bfm v}     \def\bV{\bfm V}     \def\cV{{\cal  V}}     \def\calV{{\cal  V}}
+\def\bw{\bfm w}     \def\bW{\bfm W}     \def\cW{{\cal  W}}     \def\calW{{\cal  W}}
+\def\bx{\bfm x}     \def\bX{\bfm X}     \def\cX{{\cal  X}}     \def\calX{{\cal  X}}
+\def\by{\bfm y}     \def\bY{\bfm Y}     \def\cY{{\cal  Y}}     \def\calY{{\cal  Y}}
+\def\bz{\bfm z}     \def\bZ{\bfm Z}     \def\cZ{{\cal  Z}}     \def\calZ{{\cal  Z}}
+\def\bzero{\bfm 0}
+
+% \boldsymbol{greek letters}
+\newcommand{\bfsym}[1]{\ensuremath{\boldsymbol{#1}}}
+\def \balpha   {\bfsym{\alpha}}       \def \bbeta    {\bfsym{\beta}}
+\def \bgamma   {\bfsym{\gamma}}       \def \bdelta   {\bfsym{\delta}}
+\def \bepsilon {\bfsym{\epsilon}}     \def \bzeta    {\bfsym{\zeta}}
+\def \betta    {\bfsym{\eta}}         \def \btheta   {\bfsym{\theta}}
+\def \biota    {\bfsym{\iota}}        \def \bkappa   {\bfsym{\kappa}}
+\def \blambda  {\bfsym{\lambda}}      \def \bmu      {\bfsym{\mu}}
+\def \bnu      {\bfsym{\nu}}          \def \bxi      {\bfsym{\xi}}
+\def \bomicron {\bfsym{\omicron}}     \def \bpi      {\bfsym{\pi}}
+\def \brho     {\bfsym{\rho}}         \def \bsigma   {\bfsym{\sigma}}
+\def \btau     {\bfsym{\tau}}         \def \bupsilon {\bfsym{\upsilon}}
+\def \bphi     {\bfsym{\phi}}         \def \bchi     {\bfsym{\chi}}
+\def \bpsi     {\bfsym{\psi}}         \def \bomega   {\bfsym{\omega}}
+\def \beps     {\bfsym \varepsilon}
+
+% \boldsymbol{GREEK LETTERS}
+\def \bGamma   {\bfsym{\Gamma}}       \def \bDelta   {\bfsym{\Delta}}
+\def \bTheta   {\bfsym{\Theta}}       \def \bLambda  {\bfsym{\Lambda}}
+\def \bXi      {\bfsym{\Xi}}          \def \bPi      {\bfsym{\Pi}}
+\def \bSigma   {\bfsym{\Sigma}}       \def \bUpsilon {\bfsym{\Upsilon}}
+\def \bPhi     {\bfsym{\Phi}}         \def \bPsi     {\bfsym{\Psi}}
+\def \bOmega   {\bfsym{\Omega}}
+
+% \hat{greek letters}
+\renewcommand{\hat}{\widehat}
+\def \halpha   {\hat{\alpha}}         \def \hbeta    {\hat{\beta}}
+\def \hgamma   {\hat{\gamma}}         \def \hdelta   {\hat{\delta}}
+\def \hepsilon {\hat{\epsilon}}       \def \hzeta    {\hat{\zeta}}
+\def \heta     {\hat{\eta}}           \def \htheta   {\hat{\theta}}
+\def \hiota    {\hat{\iota}}          \def \hkappa   {\hat{\kappa}}
+\def \hlambda  {\hat{\lambda}}        \def \hmu      {\hat{\mu}}
+\def \hnu      {\hat{\nu}}            \def \hxi      {\hat{\xi}}
+\def \homicron {\hat{\omicron}}       \def \hpi      {\hat{\pi}}
+\def \hrho     {\hat{\rho}}           \def \hsigma   {\hat{\sigma}}
+\def \htau     {\hat{\tau}}           \def \hupsilon {\hat{\upsilon}}
+\def \hphi     {\hat{\phi}}           \def \hchi     {\hat{\chi}}
+\def \hpsi     {\hat{\psi}}           \def \homega   {\hat{\omega}}
+\def \heps     {\hat{\heps}}
+
+% \hat{\boldsymbol{greek letters}}
+\def \hbalpha   {\hat{\balpha}}       \def \hbbeta    {\hat{\bbeta}}
+\def \hbgamma   {\hat{\bgamma}}       \def \hbdelta   {\hat{\bdelta}}
+\def \hbepsilon {\hat{\bepsilon}}     \def \hbzeta    {\hat{\bzeta}}
+\def \hbeta     {\hat{\betta}}        \def \hbtheta   {\hat{\btheta}}
+\def \hbiota    {\hat{\biota}}        \def \hbkappa   {\hat{\bkappa}}
+\def \hblambda  {\hat{\blambda}}      \def \hbmu      {\hat{\bmu}}
+\def \hbnu      {\hat{\bnu}}          \def \hbxi      {\hat{\bxi}}
+\def \hbomicron {\hat{\bomicron}}     \def \hbpi      {\hat{\bpi}}
+\def \hbrho     {\hat{\brho}}         \def \hbsigma   {\hat{\bsigma}}
+\def \hbtau     {\hat{\btau}}         \def \hbupsilon {\hat{\bupsilon}}
+\def \hbphi     {\hat{\bphi}}         \def \hbchi     {\hat{\bchi}}
+\def \hbpsi     {\hat{\bpsi}}         \def \hbomega   {\hat{\bomega}}
+\def \hbeps     {\hat{\beps}}
+
+% \hat{\boldsymbol{GREEK LETTERS}}
+\def \hbGamma   {\hat{\bGamma}}       \def \hbDelta   {\hat{\bDelta}}
+\def \hbTheta   {\hat{\bTheta}}       \def \hbLambda  {\hat{\bLambda}}
+\def \hbXi      {\hat{\bXi}}          \def \hbPi      {\hat{\bPi}}
+\def \hbSigma   {\hat{\bSigma}}       \def \hbUpsilon {\hat{\bUpsilon}}
+\def \hbPhi     {\hat{\bPhi}}         \def \hbPsi     {\hat{\bPsi}}
+\def \hbOmega   {\hat{\bOmega}}
+
+
+\newcommand{\lzeronorm}[1]{\lVert#1\rVert_0}
+\newcommand{\lonenorm}[1]{\lVert#1\rVert_1}
+\newcommand{\ltwonorm}[1]{\lVert#1\rVert_2}
+\newcommand{\lfournorm}[1]{\lVert#1\rVert_4}
+\newcommand{\opnorm}[1]{\lVert#1\rVert_{op}}
+\newcommand{\fnorm}[1]{\lVert#1\rVert_F}
+\newcommand{\nnorm}[1]{\lVert#1\rVert_N}
+\newcommand{\supnorm}[1]{ \lVert#1  \rVert_{\max}}
+\newcommand{\inn}[1]{\langle #1 \rangle}
+\newcommand{\truncate}[1]{\sgn(#1)(|#1|\wedge \tau)}
+\newcommand{\shrunk}[1]{#1 (\|#1\|_2 \wedge \tau)/\ltwonorm{#1}}
+\newcommand{\shrunkt}[1]{#1^T \; (\|#1\|_2 \wedge \tau)/\ltwonorm{#1}}
+\newcommand{\beq}  {\begin{equation}}
+\newcommand{\eeq}  {\end{equation}}
+
+\DeclareMathOperator*{\argmin}{argmin}
+\DeclareMathOperator{\corr}{corr}
+\DeclareMathOperator{\cov}{cov}
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Dev}{Dev}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\E}{E}
+\DeclareMathOperator{\logit}{logit}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\RSS}{RSS}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\var}{var}
+\DeclareMathOperator{\SE}{SE}
+\DeclareMathOperator{\tr}{tr}
+
+\def \var   {\mbox{var}}
+\def \corr  {\mbox{corr}}
+\def \rase  {\mbox{RASE}}
+\def \Cov   {\mbox{Cov}}
+\def \C     {\mbox{const.}\quad}
+\def \MSE   {\mbox{MSE}}
+\def \MISE  {\mbox{MISE}}
+\def \AMISE {\mbox{AMISE}}
+\def \SE    {\mbox{SE}}
+\def \se    {\mbox{SE}}
+\def \andd  {\mbox{and}}
+\def \logit {\mbox{logit}}
+\def \new   {\mbox{new}}
+\def \say   {\mbox{(say)}}
+\def \MLE   {\mbox{\smallfont{MLE}}}
+\def \U     {\mbox{\smallfont{U}}}
+\def \sgn   {\mbox{sgn}}
+\def \rcv   {{\rm RCV}}
+\def \lasso {{\rm LASSO}}
+\def \scad  {{\rm SCAD}}
+
+\def \betaa    {\bbeta_{\alpha}^{\ast}}
+\def \betas    {\bbeta^{\ast}}
+\def \betah    {\bbeta_{\alpha}^{h}}
+\def \betac    {\bbeta_{\alpha}^{c}}
+\def \betacs   {\bbeta_{\alpha}^{c\ast}}
+\def \sqLogpN  {\sqrt{(\log p)/n}}
+\def \la       {\ell_{\alpha}}
+\def \kl       {\kappa_{\cL}}
+\def \ku       {\kappa_u}
+\def \ko       {\kappa_0}
+\def \Rd       {\mathbb{R}^d}
+\def \Rdd	{\mathbb{R}^{d_1\times d_2}}
+\def \RR	{\mathbb{R}}
+\def \NN {\mathbb{N}}
+\def \fd       {f_{\bDelta}}
+\def \gd       {g_{\bDelta}}
+\def \Rq       {R_{q}}
+\def \bbP      {\mathbb{P}}
+\def \bbS      {\mathbb{S}}
+\def \sidx     {\sup_{(\bbeta,\bDelta)\in A'\cap \bDelta \in \bbS_1(\tau)}}
+\def \vec	{\text{vec}}
+\def \mat {\text{mat}}
+\def \hcov	{\hat\Sigma^h_{yx_j}(\alpha)}
+\def \ind {1}
+\def \Tr {\text{Tr}}
+\def \bbX {\mathbb{X}}
+\def \bbY {\mathbb{Y}}
+
+\title{Elements of academic writing}
+\author{Xiaoyang Song, Shihao Wu, Ziwei Zhu}
+\date{June, 2021}
+
+\begin{document}
+
+\maketitle
+\section{Notation}
+\begin{enumerate}
+    \item  Use bold letters for vectors and regular letters for
+    scalars. For instance, let $n$ denote the sample size and $\bv$ denote the vector that collects the parameters of interest.
+    
+    \item Use bold capital letters to denote matrices. For instance, let $\bW \in \RR ^ {d \times K}$ denote the weight matrix. 
+\end{enumerate}
+\section{Mathematical display}
+    \begin{enumerate}
+    \item Use \verb|^{\top}| to denote the transpose of a vector or matrix. For instance,
+    the transpose of matrix $\bA$ is $\bA^{\top}$.
+    \item Use \verb|\balpha^{\top}\bbeta| to  denote the inner product between two vectors $\balpha$ and $\bbeta$. For instance,
+    let $\balpha$ and $\bbeta$ be two vectors of dimension $d \times 1$, then its inner product is given by $\balpha^{\top}\bbeta$. 
+    \item Use \verb|$\texttt{}$| to refer to a package or a specific function therein. For instance,
+       the $\texttt{Pytorch}$ library adds the bias term by default, or
+    be sure to do $\texttt{optimizer.step()}$ before $\texttt{scheduler.step()}$. 
+    
+    \item Don't use \verb|$\texttt{}$| when referring to an approach or algorithm; for example, Principal Component Analysis (PCA).
+    \item Use \verb|$\mathrm{}$| to refer to math functions. For instance,
+     the $\mathrm{LogSoftmax()}$ function returns the logarithm of the $\mathrm{Softmax()}$ function.
+    \item Do not use \verb|$\cdot$| for any kind of multiplication, e.g., scalar-scalar product, Hadamard product, inner product, matrix-vector product, etc. 
+    \item Use \verb|$\log_{base}(number)$| instead of \verb|$log_{base}(number)$| to denote logarithm. For instance,
+    the objective function we want to minimize is $\mathrm{Loss}:= -\log(q_j(x))$
+         ,where $q_j(x)$ is obtained by applying the $\mathrm{Softmax()}$ function to the raw scores.
+    
+\end{enumerate}
+\section{Word choice}
+\begin{enumerate}
+    \item There is no multi-dimensional vector; instead we should use the term multi-dimensional tensor.
+    \item Instead of using ``number of samples'', we should use ``number of observations'' or ``sample size'' to describe how many observations we have.
+    \item Never use ``want to''. Use ``plan to'', ``wish to'', ``intend to'', etc. 
+\end{enumerate}
+\section{Organization}
+\begin{enumerate}
+    \item Define a quantity before using it.
+     \item Explain the domain and image space first when describing a function. For example, consider $f: \RR \to \RR ^ d$. 
+\end{enumerate}
+\section{Coding style}
+
+\end{document}
